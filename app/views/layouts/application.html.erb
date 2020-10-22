@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <div>
+      <% if logged_in? %>
+      <%= link_to "Review An Officer", new_review_path %>
+      <%= link_to "Feed", officers_path %>
+      <%= link_to "Log Out", logout_path, method: "delete" %> 
+      <% else %> 
+      <%= link_to "Log In", login_path %> | 
+      <%= link_to "Sign Up", signup_path %> 
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
