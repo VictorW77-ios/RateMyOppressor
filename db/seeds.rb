@@ -8,3 +8,6 @@
 
 v = User.create(email: 'vic@vic.com', username: 'vic', password: '123')
 j = User.create(email: 'jai@jai.com', username: 'jai', password: '123')
+
+ Review.create(title: "Good Experience", content: "She did really well handling the situation", user_id: v.id, officer_id: 0)
+ Review.create(title: "First Post!", content: "Just testing out the site", user_id: j.id, officer_id: 1)
