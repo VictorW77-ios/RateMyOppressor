@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController 
 
-
-    def home 
+    def new 
     end 
 
     def create 
@@ -11,16 +10,33 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id 
             redirect_to user_path(user)
         else 
-            flash[:message] = "Incorrect username/password"
+            flash[:error] = "Incorrect username/password"
             redirect_to '/login'
         end 
     end 
 
+    def google_auth 
+        @user = User.find_or_create_by(email: auth["info"]["email"]) do |user|
+            user.username = auth["info"]["first_name"]
+            user.password = SecureRandom.hex(10)
+          end
+          if @user.save
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
+          else
+            redirect_to '/'
+        end
+    end 
 
     def destroy 
-        # binding.pry
         session.clear 
-        redirect_to root_path
+        redirect_to '/'
+    end 
+
+    private 
+
+    def auth 
+        request.env['omniauth.auth']
     end 
 
 
