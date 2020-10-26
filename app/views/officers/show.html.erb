@@ -1,0 +1,7 @@
+<h1><%= @officer.name %></h1>
+<h2>Race: <%= @officer.race %></h2>
+<h2>Gender: <%= @officer.gender %></h2>
+<h2>Badge Number: <%= @officer.badge_number %></h2>
+
+
+<%= link_to "Leave a Review", new_review_path(@officer)  %>
