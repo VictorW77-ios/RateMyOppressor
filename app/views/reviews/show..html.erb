@@ -1,0 +1,13 @@
+<h2><%= @review.title %></h2>
+<strong>Posted: <%= @review.created_at %></strong>
+<br>
+<p><small><%= @review.content %></small></p>
+
+<br>
+
+<% if @review.user == current_user %>
+
+<%= link_to "Edit", edit_review_path(@review) %>
+<%= link_to "Delete", delete_review_path(@review) %>
+
+<% end %>

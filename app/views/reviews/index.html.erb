@@ -1,1 +1,8 @@
-<h1>All Reviews</h1>
+<h1>What Others Are Saying</h1>
+
+<% @reviews.each do |review| %> 
+    <h3><a href="/reviews/<%= review.id %>"><%= review.title %></a><h3>
+<br>
+    <p><small><%= review.description %></small></p>
+    <p></small>Posted on: <%= review.created_at %></small></p>
+<% end %>

@@ -1,4 +1,4 @@
-<h1> Write A Review For: </h1> 
+<h1> Write A Review For This Officer</h1> 
 
 <%= form_for (@review) do |f| %> 
     <%= f.label  :title %> 
@@ -8,8 +8,6 @@
     <%= f.text_area :content %> 
 
 
-    <%= f.submit "Post Review" %> 
-
-
+    <%= f.submit "Post Review" %>
 
 <% end %> 
