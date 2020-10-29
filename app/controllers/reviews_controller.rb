@@ -30,11 +30,8 @@ class ReviewsController < ApplicationController
     end 
 
     def edit
-        @review = Review.find(params[:id])
-        if !logged_in? 
-            flash[:error] = "Login to edit your review"
-            redirect_to login_path
-        end 
+        @review = Review.find_by_id(params[:id])
+        redirect_to reviews_path if !@review || @review.user != current_user
     end 
 
     def update
