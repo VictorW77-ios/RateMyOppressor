@@ -1,6 +1,5 @@
 <h1>Chicago PD Officers</h1>
 
 <% @officers.each do |officer| %>
-    <h3><a href="/officers/<%= officer.id %>"><%= officer.job_title %> <%= officer.name %> </a><h3>
-    <p><%= officer.badge_number %></p>
+    <h3><a href="/officers/<%= officer.id %>"><%= officer.job_title %> <%= officer.name %></a></h3>
 <% end %>
