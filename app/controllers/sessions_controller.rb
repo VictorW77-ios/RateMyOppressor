@@ -19,11 +19,12 @@ class SessionsController < ApplicationController
         @user = User.find_or_create_by(email: auth["info"]["email"]) do |user|
             user.username = auth["info"]["first_name"]
             user.password = SecureRandom.hex(10)
-          end
-          if @user.save
-            session[:user_id] = @user.id
+        end
+
+        if @user.save
+            session[:user_id] = @user.id  # officially logs in user 
             redirect_to user_path(@user)
-          else
+        else
             redirect_to '/'
         end
     end 
