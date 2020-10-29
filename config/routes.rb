@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   # Omni-Auth Route 
-  get "/google_auth/:provider/callback" => 'sessions#google_auth'
+  get "/auth/:provider/callback" => 'sessions#google_auth'
 
   resources :officers
   resources :reviews 
