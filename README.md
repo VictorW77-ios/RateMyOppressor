@@ -1,24 +1,6 @@
-# README
+# Rate My Oppressor
+Rate My Oppressor builds on my previous [Ruby gem] (https://github.com/VictorW77-ios/Popo-Cli-Project) command-line interface and works to balance the power dynamic between The People and law enforcement by allowing its users to leave reviews on officers in the Chicago Police Department. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## License
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
