@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
     end 
 
     def index 
-        @reviews = Review.all 
+        @reviews = Review.all.alpha
     end 
 
     def show 
