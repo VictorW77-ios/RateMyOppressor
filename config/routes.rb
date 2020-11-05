@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # Omni-Auth Route 
   get "/auth/:provider/callback" => 'sessions#google_auth'
 
-  resources :officers
+  resources :officers do 
+    resources :reviews 
+  end 
   resources :reviews 
   resources :users 
 
