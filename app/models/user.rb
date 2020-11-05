@@ -4,10 +4,8 @@ class User < ApplicationRecord
     has_many :posted_reviews, through: :reviews, source: :officer
 
     has_secure_password
+
+    validates :username, :email, presence: true
 end
 
 
-# --- INSERT NESTED ROUTES --- 
-'/users'
-'/officers'
-'/reviews'
