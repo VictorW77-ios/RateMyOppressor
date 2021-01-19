@@ -2,6 +2,6 @@
 
 <ul>
 <% @reviews.each do |r|%>
-  <%= r.user.username%> says "<%= r.content%>" about: <strong><%= link_to r.officer.name, officer_path(r.officer_id) %></strong>
+  <%= r.user.username%> said "<%= r.content%>" about: <strong><%= link_to r.officer.name, officer_path(r.officer_id) %></strong><br>
 <% end %>
 </ul>

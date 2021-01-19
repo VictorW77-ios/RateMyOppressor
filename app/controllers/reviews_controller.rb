@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-
     before_action :redirect_if_not_logged_in
 
 
@@ -14,7 +13,7 @@ class ReviewsController < ApplicationController
     def create 
         @review = current_user.reviews.build(review_params) # associates reviews with user // built off user
         if @review.save
-            redirect_to reviews_path   # redirect to officer page with new review
+            redirect_to reviews_path(@review)   # redirect to officer page with new review
         else 
             render :new
         end 

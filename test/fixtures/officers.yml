@@ -2,8 +2,14 @@
 
 one:
   name: MyString
-  description: MyString
+  race: MyString
+  job_title: MyString
+  gender: MyString
+  badge_number: MyString
 
 two:
   name: MyString
-  description: MyString
+  race: MyString
+  job_title: MyString
+  gender: MyString
+  badge_number: MyString

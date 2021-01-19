@@ -7,7 +7,7 @@
   <h4>Recent Reviews:</h4>
   <% @officer.reviews.order(updated_at: :desc).limit(3).each do |r|%>
     <li>
-      <strong><%= r.user.username%></strong> says "<%= link_to r.content, officer_review_path(@officer,r)%>" at <%= r.updated_at.strftime("%I:%M %p on %m/%d/%Y") %>
+      <strong><%= r.user.username%></strong> said "<%= link_to r.content, officer_review_path(@officer,r)%>" at <%= r.updated_at.strftime("%I:%M %p on %m/%d/%Y") %>
     </li>
   <% end %>
 <% end %>
